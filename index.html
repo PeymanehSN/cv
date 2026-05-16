@@ -8,26 +8,26 @@
 
   <meta
     name="description"
-    content="Peymaneh Safaynikoo holds a PhD in behavioral economics. Her work focuses on incentives, social comparison, transparency, organizational design, environmental economics, and sustainable decision-making."
+    content="Peymaneh Safaynikoo holds a PhD in behavioral economics. Her work connects incentives, social comparison, organizational design, environmental economics, and research-driven entrepreneurship."
   />
 
   <style>
     :root {
-      --bg: #f7f3eb;
-      --paper: #fffaf2;
-      --paper-soft: #f1e8dc;
-      --ink: #1d1915;
-      --ink-soft: #3f3831;
-      --muted: #74695e;
-      --line: rgba(70, 56, 40, 0.16);
-      --accent: #8a5a33;
-      --accent-2: #b4835b;
-      --accent-soft: rgba(138, 90, 51, 0.11);
-      --green: #4d6b57;
-      --green-soft: rgba(77, 107, 87, 0.11);
-      --shadow: 0 22px 70px rgba(52, 38, 22, 0.12);
-      --radius: 22px;
-      --max: 1120px;
+      --bg: #070b15;
+      --bg-2: #0b1020;
+      --panel: rgba(255,255,255,0.065);
+      --panel-2: rgba(255,255,255,0.095);
+      --text: #f5f7fb;
+      --soft: #d8deea;
+      --muted: #aeb7ca;
+      --dim: #7f8aa3;
+      --accent: #8ea2ff;
+      --accent-2: #40e0d0;
+      --accent-3: #f1c27d;
+      --line: rgba(255,255,255,0.13);
+      --shadow: 0 28px 90px rgba(0,0,0,0.42);
+      --radius: 24px;
+      --max: 1140px;
     }
 
     * {
@@ -41,11 +41,12 @@
     body {
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      color: var(--ink);
+      color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(180, 131, 91, 0.22), transparent 27%),
-        radial-gradient(circle at top right, rgba(77, 107, 87, 0.13), transparent 26%),
-        linear-gradient(180deg, #f7f3eb 0%, #f1e8dc 50%, #f7f3eb 100%);
+        radial-gradient(circle at 8% 0%, rgba(142,162,255,0.24), transparent 28%),
+        radial-gradient(circle at 92% 8%, rgba(64,224,208,0.18), transparent 25%),
+        radial-gradient(circle at 50% 100%, rgba(241,194,125,0.08), transparent 28%),
+        linear-gradient(180deg, #070b15 0%, #0b1020 48%, #050812 100%);
       line-height: 1.7;
       overflow-x: hidden;
     }
@@ -56,7 +57,7 @@
     }
 
     a:hover {
-      color: var(--accent);
+      color: var(--accent-2);
     }
 
     .container {
@@ -67,29 +68,29 @@
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 50;
-      backdrop-filter: blur(18px);
-      background: rgba(247, 243, 235, 0.82);
+      z-index: 40;
+      backdrop-filter: blur(20px);
+      background: rgba(5,8,18,0.66);
       border-bottom: 1px solid var(--line);
     }
 
     .nav {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      align-items: center;
+      gap: 22px;
       padding: 15px 0;
     }
 
     .brand {
       display: flex;
       flex-direction: column;
-      gap: 1px;
+      gap: 2px;
     }
 
     .brand strong {
       font-size: 1.02rem;
-      letter-spacing: -0.01em;
+      letter-spacing: 0.2px;
     }
 
     .brand span {
@@ -100,9 +101,9 @@
     .navlinks {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 0.93rem;
     }
 
     .navlinks a {
@@ -112,17 +113,17 @@
     }
 
     .navlinks a:hover {
-      background: var(--accent-soft);
-      color: var(--accent);
+      background: rgba(255,255,255,0.075);
+      color: var(--text);
     }
 
     .hero {
-      padding: 74px 0 36px;
+      padding: 76px 0 38px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
+      grid-template-columns: 1.32fr 0.68fr;
       gap: 24px;
       align-items: stretch;
     }
@@ -130,17 +131,21 @@
     .hero-card,
     .side-card,
     .section-card {
-      background: rgba(255, 250, 242, 0.82);
+      background: var(--panel);
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
       border-radius: var(--radius);
-      backdrop-filter: blur(16px);
+      backdrop-filter: blur(18px);
     }
 
     .hero-card {
-      padding: 40px;
+      padding: 38px;
       position: relative;
       overflow: hidden;
+      min-height: 560px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .hero-card::before {
@@ -148,7 +153,7 @@
       position: absolute;
       inset: -1px;
       background:
-        linear-gradient(135deg, rgba(138, 90, 51, 0.12), rgba(77, 107, 87, 0.08), transparent 68%);
+        linear-gradient(135deg, rgba(142,162,255,0.16), rgba(64,224,208,0.10), transparent 64%);
       pointer-events: none;
     }
 
@@ -159,40 +164,57 @@
 
     .eyebrow {
       display: inline-flex;
+      width: fit-content;
       align-items: center;
       gap: 8px;
       padding: 8px 12px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      color: var(--accent);
-      background: rgba(138, 90, 51, 0.07);
+      color: var(--soft);
       font-size: 0.88rem;
-      font-weight: 650;
-      margin-bottom: 20px;
+      background: rgba(255,255,255,0.045);
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 18px rgba(64,224,208,0.55);
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(2.35rem, 5vw, 4.58rem);
-      line-height: 1.04;
-      letter-spacing: -0.055em;
+      font-size: clamp(2.55rem, 5.4vw, 5.25rem);
+      line-height: 1.01;
+      letter-spacing: -0.058em;
+      max-width: 900px;
     }
 
     .highlight {
-      color: var(--accent);
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     .subhead {
-      margin-top: 20px;
-      color: var(--ink-soft);
-      font-size: 1.08rem;
-      max-width: 74ch;
+      margin-top: 22px;
+      color: var(--soft);
+      font-size: 1.1rem;
+      max-width: 76ch;
     }
 
-    .quiet-note {
+    .subhead strong {
+      color: var(--text);
+    }
+
+    .hero-note {
       margin-top: 16px;
       color: var(--muted);
-      font-size: 0.98rem;
+      font-size: 1rem;
       max-width: 76ch;
     }
 
@@ -200,73 +222,72 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 28px;
+      margin-top: 30px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 12px 17px;
+      gap: 8px;
+      padding: 12px 18px;
       border-radius: 14px;
       border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.45);
+      background: rgba(255,255,255,0.055);
       transition: 0.2s ease;
       font-weight: 650;
-      font-size: 0.94rem;
+      font-size: 0.95rem;
     }
 
     .btn:hover {
       transform: translateY(-2px);
-      border-color: rgba(138, 90, 51, 0.35);
-      background: rgba(255, 255, 255, 0.7);
-      color: var(--accent);
+      border-color: rgba(255,255,255,0.24);
+      background: rgba(255,255,255,0.09);
+      color: var(--text);
     }
 
     .btn.primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #fffaf2;
+      background: linear-gradient(135deg, rgba(142,162,255,0.96), rgba(64,224,208,0.94));
+      color: #06101c;
       border: none;
-    }
-
-    .btn.primary:hover {
-      color: #fffaf2;
-      filter: brightness(0.98);
     }
 
     .side-card {
       padding: 25px;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       gap: 18px;
     }
 
     .avatar {
-      width: 92px;
-      height: 92px;
-      border-radius: 24px;
-      background: linear-gradient(135deg, rgba(138, 90, 51, 0.20), rgba(77, 107, 87, 0.16));
+      width: 96px;
+      height: 96px;
+      border-radius: 25px;
+      background:
+        linear-gradient(135deg, rgba(142,162,255,0.35), rgba(64,224,208,0.20));
       border: 1px solid var(--line);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
+      font-size: 2.05rem;
       font-weight: 850;
-      color: var(--accent);
       letter-spacing: -0.06em;
+      color: var(--text);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.24);
     }
 
     .smallcaps {
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.13em;
       font-size: 0.76rem;
-      color: var(--muted);
-      font-weight: 700;
+      color: var(--dim);
+      font-weight: 800;
     }
 
     .side-card h2 {
-      margin: 6px 0 8px;
-      font-size: 1.25rem;
+      margin: 7px 0 8px;
+      font-size: 1.28rem;
       line-height: 1.25;
       letter-spacing: -0.03em;
     }
@@ -278,33 +299,32 @@
 
     .fact-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
+      grid-template-columns: 1fr;
+      gap: 11px;
       margin-top: 4px;
     }
 
     .fact {
       padding: 14px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.46);
+      border-radius: 17px;
+      background: rgba(255,255,255,0.055);
       border: 1px solid var(--line);
     }
 
     .fact strong {
       display: block;
       font-size: 0.98rem;
-      margin-bottom: 4px;
-      color: var(--ink);
+      margin-bottom: 3px;
     }
 
     .fact span {
       color: var(--muted);
-      font-size: 0.88rem;
+      font-size: 0.89rem;
       line-height: 1.45;
     }
 
     .section {
-      padding: 14px 0 34px;
+      padding: 14px 0 36px;
     }
 
     .section-card {
@@ -312,7 +332,7 @@
     }
 
     .section h2 {
-      font-size: 1.55rem;
+      font-size: 1.62rem;
       margin: 0 0 10px;
       letter-spacing: -0.035em;
       line-height: 1.2;
@@ -325,6 +345,12 @@
 
     .section p {
       margin: 10px 0;
+    }
+
+    .lead {
+      color: var(--soft) !important;
+      font-size: 1.03rem;
+      max-width: 88ch;
     }
 
     .grid-2 {
@@ -340,22 +366,29 @@
       margin-top: 18px;
     }
 
-    .mini-card {
-      padding: 18px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.42);
+    .mini-card,
+    .project,
+    .item {
+      border-radius: 19px;
+      background: rgba(255,255,255,0.052);
       border: 1px solid var(--line);
     }
 
-    .mini-card h3 {
+    .mini-card {
+      padding: 18px;
+    }
+
+    .mini-card h3,
+    .project h3 {
       margin: 0 0 8px;
-      font-size: 1.02rem;
+      font-size: 1.07rem;
       letter-spacing: -0.02em;
     }
 
-    .mini-card p {
+    .mini-card p,
+    .project p {
       margin: 0;
-      font-size: 0.95rem;
+      font-size: 0.96rem;
     }
 
     .tag {
@@ -363,17 +396,23 @@
       margin-bottom: 12px;
       padding: 6px 10px;
       border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
+      background: rgba(142,162,255,0.14);
+      color: #dfe5ff;
       font-size: 0.81rem;
-      font-weight: 700;
-      border: 1px solid rgba(138, 90, 51, 0.15);
+      font-weight: 750;
+      border: 1px solid rgba(142,162,255,0.20);
     }
 
-    .green-tag {
-      background: var(--green-soft);
-      color: var(--green);
-      border: 1px solid rgba(77, 107, 87, 0.18);
+    .tag.teal {
+      background: rgba(64,224,208,0.11);
+      color: #cafaf5;
+      border-color: rgba(64,224,208,0.20);
+    }
+
+    .tag.gold {
+      background: rgba(241,194,125,0.11);
+      color: #ffe5bc;
+      border-color: rgba(241,194,125,0.20);
     }
 
     .project-grid {
@@ -385,19 +424,6 @@
 
     .project {
       padding: 20px;
-      border-radius: 19px;
-      background: rgba(255, 255, 255, 0.42);
-      border: 1px solid var(--line);
-    }
-
-    .project h3 {
-      margin: 0 0 8px;
-      font-size: 1.08rem;
-      letter-spacing: -0.02em;
-    }
-
-    .project p {
-      margin: 0;
     }
 
     .pub-list {
@@ -409,17 +435,17 @@
 
     .pub {
       padding: 18px 18px 18px 20px;
-      border-left: 3px solid var(--accent);
-      background: rgba(255, 255, 255, 0.44);
-      border-radius: 0 16px 16px 0;
+      border-left: 3px solid var(--accent-2);
+      background: rgba(255,255,255,0.045);
+      border-radius: 0 17px 17px 0;
       border-top: 1px solid var(--line);
       border-right: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
 
     .pub-title {
-      font-weight: 750;
-      color: var(--ink);
+      font-weight: 760;
+      color: var(--text);
       margin-bottom: 4px;
       line-height: 1.45;
     }
@@ -437,9 +463,6 @@
 
     .item {
       padding: 18px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.42);
-      border: 1px solid var(--line);
     }
 
     .item-top {
@@ -466,13 +489,13 @@
     }
 
     .contact-card a {
-      color: var(--accent);
-      font-weight: 650;
+      color: var(--accent-2);
+      font-weight: 700;
     }
 
     .footer {
-      padding: 34px 0 56px;
-      color: var(--muted);
+      padding: 34px 0 58px;
+      color: var(--dim);
       text-align: center;
       font-size: 0.92rem;
     }
@@ -483,6 +506,10 @@
       .grid-3,
       .project-grid {
         grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: auto;
       }
 
       .nav {
@@ -503,11 +530,7 @@
       }
 
       h1 {
-        font-size: 2.35rem;
-      }
-
-      .fact-grid {
-        grid-template-columns: 1fr;
+        font-size: 2.45rem;
       }
 
       .navlinks {
@@ -527,11 +550,11 @@
     <div class="container nav">
       <div class="brand">
         <strong>Peymaneh Safaynikoo</strong>
-        <span>PhD in Behavioral Economics • Incentives • Sustainable Decision-Making</span>
+        <span>PhD in Behavioral Economics • Incentives • Sustainability • Entrepreneurship</span>
       </div>
 
       <nav class="navlinks">
-        <a href="#current">Current Project</a>
+        <a href="#project">Current Project</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#applied">Applied Work</a>
@@ -547,57 +570,54 @@
       <div class="container hero-grid">
 
         <div class="hero-card">
-          <div class="eyebrow">Behavioral economics × incentive design × sustainable consumption</div>
+          <div class="eyebrow">Behavioral economics × field experimentation × circular economy</div>
 
           <h1>
-            I study how <span class="highlight">incentives, information, and social comparison</span> shape real decisions.
+            I study how <span class="highlight">incentives become behavior</span>.
           </h1>
 
           <p class="subhead">
-            I hold a PhD in behavioral economics from EBS University of Business and Law. My research connects incentive design, social preferences, organizational economics, environmental economics, and sustainable decision-making.
+            I hold a <strong>PhD in behavioral economics</strong> from EBS University of Business and Law. My work examines how incentives, transparency, social comparison, and information shape decisions in organizations, markets, and sustainability contexts.
           </p>
 
-          <p class="quiet-note">
-            My current direction is a theory-guided field experiment on circular-economy behavior, using a digital wardrobe setting to study how valuation, peer comparison, defaults, and sustainability feedback influence what people do with unused possessions.
+          <p class="hero-note">
+            My current research direction turns entrepreneurship into experimental infrastructure: using a digital wardrobe product to test how valuation, peer comparison, default options, and sustainability feedback change circular-economy decisions.
           </p>
 
           <div class="cta-row">
-            <a class="btn primary" href="mailto:peymaneh.safaee@gmail.com">Contact me</a>
-            <a class="btn" href="#current">Current research direction</a>
-            <a class="btn" href="#publications">Selected work</a>
+            <a class="btn primary" href="#project">View current project</a>
+            <a class="btn" href="#publications">Selected research</a>
+            <a class="btn" href="mailto:peymaneh.safaee@gmail.com">Contact</a>
           </div>
         </div>
 
         <aside class="side-card">
-          <div class="avatar">PS</div>
+          <div>
+            <div class="avatar">PS</div>
+          </div>
 
           <div>
             <div class="smallcaps">Research profile</div>
-            <h2>Theory-informed, applied, and experiment-oriented.</h2>
+            <h2>Economic theory, behavioral insight, and real-world experimentation.</h2>
             <p>
-              I work on questions where economic incentives meet social motives, information, and real human behavior.
+              I work on questions where formal incentives meet social motives, fairness, status, trust, and actual behavior.
             </p>
           </div>
 
           <div class="fact-grid">
             <div class="fact">
-              <strong>PhD</strong>
-              <span>Behavioral Economics</span>
+              <strong>Academic core</strong>
+              <span>Incentives, social comparison, transparency, organizational design</span>
             </div>
 
             <div class="fact">
-              <strong>Core themes</strong>
-              <span>Incentives, transparency, peer effects</span>
+              <strong>Applied direction</strong>
+              <span>Environmental economics, sustainability, circular-economy behavior</span>
             </div>
 
             <div class="fact">
-              <strong>Applied fields</strong>
-              <span>Organizations, sustainability, entrepreneurship</span>
-            </div>
-
-            <div class="fact">
-              <strong>Current project</strong>
-              <span>Digital field experiment for circular behavior</span>
+              <strong>Entrepreneurial edge</strong>
+              <span>Product settings that can become field-experiment environments</span>
             </div>
           </div>
         </aside>
@@ -605,20 +625,21 @@
       </div>
     </section>
 
-    <section class="section" id="current">
+    <section class="section" id="project">
       <div class="container section-card">
-        <h2>Current Research Direction</h2>
+        <span class="tag teal">Current research direction</span>
+        <h2>From Dormant Wardrobes to Circular Action</h2>
 
-        <p>
-          I am developing a research project on behavioral incentives for circular-economy decisions, using a digital wardrobe setting as a field-experiment environment.
+        <p class="lead">
+          I am developing a theory-guided field experiment on circular-economy decisions, using a digital wardrobe setting to study how behavioral interventions change what people do with unused possessions.
         </p>
 
         <p>
-          The project asks whether people can be moved from passive ownership to sustainable action when unused items are made visible as economic, social, and environmental assets. It studies how valuation, loss framing, social comparison, default recommendations, marketplace signals, and sustainability feedback affect decisions to sell, donate, reuse, recycle, or keep unused fashion items.
+          The project asks whether people can be moved from passive ownership to sustainable action when unused items are made visible as economic, social, and environmental assets. It would test how digital valuation, loss framing, peer comparison, default recommendations, marketplace signals, and sustainability feedback affect decisions to sell, donate, reuse, recycle, or keep unused fashion items.
         </p>
 
         <p>
-          The project builds on my doctoral work on incentives, wage transparency, envy, and organizational design, while extending these mechanisms into sustainable consumption and circular-economy behavior.
+          This project builds on my doctoral research on wage transparency, envy, incentive contracts, and organizational design, while extending these mechanisms into sustainable consumption and circular-economy behavior.
         </p>
 
         <div class="grid-3">
@@ -631,18 +652,18 @@
           </div>
 
           <div class="mini-card">
-            <span class="tag">Experiment</span>
+            <span class="tag teal">Experiment</span>
             <h3>Digital product setting</h3>
             <p>
-              Testing behavioral treatments in a digital wardrobe environment where users make real or incentivized choices.
+              Testing behavioral treatments in a product environment where users make real or incentivized choices.
             </p>
           </div>
 
           <div class="mini-card">
-            <span class="tag green-tag">Impact</span>
-            <h3>Sustainable consumption</h3>
+            <span class="tag gold">Impact</span>
+            <h3>Sustainable action</h3>
             <p>
-              Studying how behavioral design can increase reuse, resale, donation, recycling, and waste reduction.
+              Studying how behavioral design can increase resale, reuse, donation, recycling, and waste reduction.
             </p>
           </div>
         </div>
@@ -653,7 +674,9 @@
       <div class="container grid-2">
 
         <div class="section-card">
-          <h2>Research Focus</h2>
+          <span class="tag">Research focus</span>
+          <h2>Core Research Areas</h2>
+
           <p>
             My research examines how incentives and behavioral factors shape decisions in organizations, markets, and policy environments.
           </p>
@@ -663,7 +686,7 @@
             <li>Organizational economics</li>
             <li>Incentive contracts and mechanism design</li>
             <li>Game theory and strategic interaction</li>
-            <li>Social preferences, fairness, and peer effects</li>
+            <li>Social preferences, fairness, envy, and peer effects</li>
             <li>Transparency and information design</li>
             <li>Environmental economics and sustainability</li>
             <li>Research-driven entrepreneurship</li>
@@ -671,18 +694,19 @@
         </div>
 
         <div class="section-card">
-          <h2>Research Identity</h2>
+          <span class="tag teal">Research identity</span>
+          <h2>What Connects My Work</h2>
 
           <p>
-            My doctoral research studied how social comparisons affect contractual and organizational design, particularly when transparency changes how individuals perceive incentives and peer outcomes.
+            My doctoral research studied how social comparisons affect contractual and organizational design, especially when transparency changes how individuals interpret incentives and peer outcomes.
           </p>
 
           <p>
-            My environmental economics work examined strategic incentives in international environmental agreements. My current work brings these strands together by studying how information and incentives can support sustainable consumption and circular-economy behavior.
+            My environmental economics work examined strategic incentives in international environmental agreements. My current direction connects these strands by asking how incentive design and behavioral interventions can support sustainable consumption.
           </p>
 
           <p>
-            Across these projects, my central question is how institutions, organizations, and platforms should be designed when people care not only about material payoffs, but also about fairness, status, comparison, identity, and trust.
+            Across my work, the central question is how organizations, institutions, and platforms should be designed when people care not only about payoffs, but also about fairness, status, comparison, identity, and trust.
           </p>
         </div>
 
@@ -691,7 +715,9 @@
 
     <section class="section" id="publications">
       <div class="container section-card">
-        <h2>Selected Publications and Working Papers</h2>
+        <span class="tag">Selected work</span>
+        <h2>Publications and Working Papers</h2>
+
         <p>
           Selected work related to incentives, social comparison, organizational design, and environmental economics.
         </p>
@@ -749,32 +775,33 @@
 
     <section class="section" id="applied">
       <div class="container section-card">
+        <span class="tag teal">Applied work</span>
         <h2>Research-Driven Entrepreneurship</h2>
 
-        <p>
-          My applied work explores how behavioral economics can be translated into products, experiments, and decision tools. I view entrepreneurship not only as company-building, but also as a way to create real-world environments where behavioral mechanisms can be observed and tested.
+        <p class="lead">
+          I view entrepreneurship as a way to create real-world environments where behavioral mechanisms can be observed, tested, and translated into useful products.
         </p>
 
         <div class="project-grid">
 
           <div class="project">
-            <span class="tag green-tag">Current applied project • BAVO</span>
-            <h3>Digital wardrobe setting for circular-economy behavior</h3>
+            <span class="tag teal">BAVO</span>
+            <h3>Digital wardrobe as experimental setting</h3>
             <p>
               BAVO is a product concept designed to make the hidden economic and sustainability value of wardrobes visible. It can support field experiments on valuation, loss framing, peer comparison, default recommendations, resale, reuse, donation, and recycling decisions.
             </p>
           </div>
 
           <div class="project">
-            <span class="tag">Previous applied project • MindMeld Money</span>
+            <span class="tag">MindMeld Money</span>
             <h3>Behavioral finance and decision-making</h3>
             <p>
-              A fintech concept built around behavioral economics, game theory, and gamified simulations to study financial decision-making and support more reflective choices.
+              A fintech concept built around behavioral economics, game theory, and gamified simulations to study financial decisions and support more reflective user choices.
             </p>
           </div>
 
           <div class="project">
-            <span class="tag">Policy and advisory experience</span>
+            <span class="tag gold">Advisory experience</span>
             <h3>Economic strategy under uncertainty</h3>
             <p>
               Advisory experience on investment strategy and economic constraints in complex environments, with attention to regulation, uncertainty, incentives, and institutional limitations.
@@ -783,9 +810,9 @@
 
           <div class="project">
             <span class="tag">Teaching and mentoring</span>
-            <h3>Behavioral economics and economic reasoning</h3>
+            <h3>Economic reasoning and behavioral insight</h3>
             <p>
-              Experience teaching and mentoring students in economics, decision-making, and research thinking, with an emphasis on making analytical ideas clear, applicable, and useful.
+              Experience teaching and mentoring students in economics, decision-making, and research thinking, with an emphasis on making analytical ideas clear and applicable.
             </p>
           </div>
 
@@ -797,7 +824,8 @@
       <div class="container grid-2">
 
         <div class="section-card">
-          <h2>Education</h2>
+          <span class="tag">Education</span>
+          <h2>Academic Background</h2>
 
           <div class="timeline">
 
@@ -841,6 +869,7 @@
         </div>
 
         <div class="section-card">
+          <span class="tag teal">Methods</span>
           <h2>Methods and Tools</h2>
 
           <p>
@@ -865,6 +894,7 @@
       <div class="container grid-2">
 
         <div class="section-card">
+          <span class="tag">Languages</span>
           <h2>Languages</h2>
 
           <ul class="list-clean">
@@ -876,10 +906,11 @@
         </div>
 
         <div class="section-card contact-card" id="contact">
+          <span class="tag teal">Contact</span>
           <h2>Contact</h2>
 
           <p>
-            I am open to academic collaborations, postdoctoral research opportunities, JSPS-related discussions, and research-driven entrepreneurship projects.
+            Open to academic collaborations, JSPS-related discussions, postdoctoral research opportunities, and research-driven entrepreneurship projects.
           </p>
 
           <p>
@@ -900,7 +931,7 @@
 
   <footer class="footer">
     <div class="container">
-      Research profile • Behavioral economics, incentives, and sustainable decision-making • Peymaneh Safaynikoo
+      Peymaneh Safaynikoo • Behavioral economics, incentives, and sustainable decision-making
     </div>
   </footer>
 
