@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Peymaneh Safaynikoo holds a PhD in behavioral economics. Her work focuses on incentives, social comparison, organizational design, environmental economics, sustainable decision-making, and research-driven entrepreneurship."
+    content="Peymaneh Safaynikoo holds a PhD in behavioral economics. Her work connects incentives, social comparison, organizational design, environmental economics, sustainable decision-making, and research-driven entrepreneurship."
   />
 
   <style>
@@ -88,9 +88,9 @@
     .navlinks{
       display:flex;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 14px;
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.94rem;
     }
 
     .navlinks a{
@@ -276,6 +276,31 @@
       font-size: 0.9rem;
     }
 
+    .cred-strip{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .cred{
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--line);
+    }
+
+    .cred strong{
+      display:block;
+      font-size: 1.05rem;
+      margin-bottom: 3px;
+    }
+
+    .cred span{
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
     .section{
       padding: 14px 0 34px;
     }
@@ -411,6 +436,25 @@
       font-size: 0.92rem;
     }
 
+    .conf-list{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .conf{
+      padding: 15px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .conf strong{
+      color: var(--text);
+    }
+
     .footer{
       padding: 34px 0 56px;
       color: var(--muted);
@@ -426,7 +470,7 @@
     }
 
     @media (max-width: 900px){
-      .hero-grid, .grid-2, .grid-3, .portfolio{
+      .hero-grid, .grid-2, .grid-3, .portfolio, .conf-list, .cred-strip{
         grid-template-columns: 1fr;
       }
 
@@ -470,7 +514,8 @@
         <a href="#current">Current Project</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
-        <a href="#applied">Applied Work</a>
+        <a href="#conferences">Conferences</a>
+        <a href="#teaching">Teaching</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -500,6 +545,25 @@
             <a class="btn primary" href="mailto:peymaneh.safaee@gmail.com">Contact me</a>
             <a class="btn" href="#current">Current project</a>
             <a class="btn" href="#publications">View publications</a>
+          </div>
+
+          <div class="cred-strip">
+            <div class="cred">
+              <strong>PhD</strong>
+              <span>Behavioral Economics</span>
+            </div>
+            <div class="cred">
+              <strong>Published</strong>
+              <span>Economic Theory, Environmental Economics and Policy Studies</span>
+            </div>
+            <div class="cred">
+              <strong>Presented</strong>
+              <span>SIOE, EARIE, IMEBESS, FUR, COPE, VfS</span>
+            </div>
+            <div class="cred">
+              <strong>Built</strong>
+              <span>BAVO and MindMeld Money</span>
+            </div>
           </div>
         </div>
 
@@ -531,8 +595,8 @@
             </div>
 
             <div class="fact">
-              <strong>Tools</strong>
-              <span>Python, R, SQL, Stata</span>
+              <strong>Methods</strong>
+              <span>Theory, behavioral testing, product experiments</span>
             </div>
           </div>
         </aside>
@@ -546,7 +610,7 @@
 
         <p>
           I am a researcher and founder working at the intersection of behavioral economics, incentives, sustainability, and human decision-making.
-          My background combines academic research, startup building, market analysis, and product-based experimentation.
+          My background combines academic research, startup building, market analysis, teaching, mentoring, and product-based experimentation.
         </p>
 
         <p>
@@ -703,6 +767,30 @@
       </div>
     </section>
 
+    <section class="section" id="conferences">
+      <div class="container section-card">
+        <h2>Conference Presentations</h2>
+
+        <p>
+          Selected presentations at international conferences in institutional economics, organizational economics, game theory, industrial economics, and behavioral social sciences.
+        </p>
+
+        <div class="conf-list">
+          <div class="conf"><strong>SIOE 2024</strong> — 28th Annual Conference, University of Chicago, USA</div>
+          <div class="conf"><strong>COPE 2024</strong> — Colloquium on Personnel Economics, University of Zurich, Switzerland</div>
+          <div class="conf"><strong>EARIE 2024</strong> — European Association for Research in Industrial Economics, Amsterdam</div>
+          <div class="conf"><strong>Verein für Socialpolitik 2024</strong> — Annual Meeting, Berlin, Germany</div>
+          <div class="conf"><strong>IMEBESS 2023</strong> — International Meeting on Experimental and Behavioral Social Sciences, Lisbon</div>
+          <div class="conf"><strong>COPE 2022</strong> — Colloquium on Personnel Economics, Aarhus, Denmark</div>
+          <div class="conf"><strong>FUR 2022</strong> — Foundations of Utility and Risk, Ghent, Belgium</div>
+          <div class="conf"><strong>SIOE 2022</strong> — Society for Institutional & Organizational Economics, Toronto, Canada</div>
+          <div class="conf"><strong>CNEE 2022</strong> — Copenhagen Network of Experimental Economics, Copenhagen</div>
+          <div class="conf"><strong>Stony Brook 2022</strong> — International Conference on Game Theory, USA</div>
+          <div class="conf"><strong>SIOE 2021</strong> — 25th Annual Conference, Massachusetts Institute of Technology, USA</div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="applied">
       <div class="container section-card">
         <h2>Applied Work and Research-Driven Entrepreneurship</h2>
@@ -730,10 +818,10 @@
           </div>
 
           <div class="project">
-            <span class="tag gold">Researcher • EBS Business School</span>
-            <h3>Behavioral concerns, organizational design, and public policy</h3>
+            <span class="tag gold">Researcher • EBS Impact Institute</span>
+            <h3>Environmental concerns, collective action, and ESG</h3>
             <p>
-              Research on organizational economics, policy design, and behavioral science, with an emphasis on incentives, institutions, and decision-making.
+              Research on environmental concerns, collective action, sustainable business solutions, ESG, and double materiality.
             </p>
           </div>
 
@@ -745,6 +833,62 @@
             </p>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="teaching">
+      <div class="container section-card">
+        <h2>Teaching and Mentoring</h2>
+
+        <p>
+          Teaching and mentoring experience across graduate and undergraduate economics, with emphasis on game theory, incentive theory, microeconomics, research methods, academic writing, and analytical reasoning.
+        </p>
+
+        <div class="grid-2">
+          <div class="item">
+            <div class="item-top">
+              <strong>Managerial Economics Part I: Game Theory</strong>
+              <span>2018 – 2022</span>
+            </div>
+            <div class="meta">Graduate level • EBS University of Business and Law</div>
+            <p>
+              Supported graduate teaching in game theory, including online teaching during the COVID-19 period.
+            </p>
+          </div>
+
+          <div class="item">
+            <div class="item-top">
+              <strong>Managerial Economics Part II: Incentive Theory</strong>
+              <span>2018 – 2022</span>
+            </div>
+            <div class="meta">Graduate level • EBS University of Business and Law</div>
+            <p>
+              Supported graduate teaching in incentive theory, organizational economics, and economic reasoning.
+            </p>
+          </div>
+
+          <div class="item">
+            <div class="item-top">
+              <strong>Microeconomics</strong>
+              <span>2016 – 2017</span>
+            </div>
+            <div class="meta">Undergraduate level • Ferdowsi University of Mashhad</div>
+            <p>
+              Taught undergraduate microeconomics with a focus on core economic intuition and analytical thinking.
+            </p>
+          </div>
+
+          <div class="item">
+            <div class="item-top">
+              <strong>Student Mentoring</strong>
+              <span>2018 – 2022</span>
+            </div>
+            <div class="meta">Bachelor’s and Master’s thesis support • EBS University of Business and Law</div>
+            <p>
+              Mentored students on thesis projects, research methodology, academic writing, examination preparation, grading, and feedback.
+            </p>
+          </div>
         </div>
       </div>
     </section>
